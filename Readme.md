@@ -82,7 +82,7 @@
 
     - Score every given product from both models and weigh each result; the final recommendations will result from the linear combination of the 2 scores.
 
-  - !["Reccomender System"](./images/recc-sys.png "Reccomender System")
+  - !["Reccomender System"](./img/recc-sys.png "Reccomender System")
 
 - Other other type of AI recommendation systems includes:
 
@@ -99,7 +99,7 @@
 
 - The idea of content based methods is to try to build a model, based on the available **features**, that explain the observed user-item interactions.
 
-- !["content-based"](./images/content-based.png "content-based")
+- !["content-based"](./img/content-based.png "content-based")
 
 - Content based methods suffer far less from the cold start problem than collaborative approaches: new users or items can be described by their characteristics (content) and so relevant suggestions can be done for these new entities.
 
@@ -116,7 +116,7 @@
 
 - We can implement them with one of two methods that are generally called memory based and model based approaches:
 
-  !["collaborative-filtering"](./images/collaborative-filtering.png "collaborative-filtering")
+  !["collaborative-filtering"](./img/collaborative-filtering.png "collaborative-filtering")
 
   - In Memory-based we measure the distance (Euclidian Distance and Cosine Distance) between all the vectors (customers) with each other and recommend products from the most similar (nearest neighbours search).
 
@@ -157,14 +157,14 @@
 
 - The main characteristics of user-user and item-item approaches it that they use only information from the user-item interaction matrix and they assume no model to produce new recommendations.
 
-- !["Overview of different Approach"](./images/user-user_item-item.png "Overview of different Approach")
+- !["Overview of different Approach"](./img/user-user_item-item.png "Overview of different Approach")
 
 - **User-User**
 
   - In order to make a new recommendation to a user, user-user method roughly tries to identify users with the most similar “interactions profile” (nearest neighbours) in order to suggest items that are the most popular among these neighbours (and that are “new” to our user).
   - This method is said to be “user-centred” as it represent users based on their interactions with items and evaluate distances between users.
   - Note to consider that two users are similar if they have interacted with a lot of common items in the same way (similar rating, similar time hovering etc).
-  - !["User-User"](./images/user-user.png "User-User")
+  - !["User-User"](./img/user-user.png "User-User")
   - The user-user method is based on the search of similar users in terms of interactions with items. As, in general, every user have only interacted with a few items, it makes the method pretty sensitive to any recorded interactions (high variance).
   - As the final recommendation is only based on interactions recorded for users similar to our user of interest, we obtain more personalized results (low bias).
 
@@ -173,7 +173,7 @@
   - The idea of item-item method is to find items similar to the ones the user already positively interacted with.
     - Two items are considered to be similar if most of the users that have interacted with both of them did it in a similar way.
   - This method is said to be “item-centred” as it represent items based on interactions users had with them and evaluate distances between those items.
-  - !["Item-Item"](./images/item-item.png "Item-Item")
+  - !["Item-Item"](./img/item-item.png "Item-Item")
   - As, in general, a lot of users have interacted with an item, the neighbourhood search is far less sensitive to single interactions (lower variance).
   - Also interactions coming from every kind of users (even users very different from our reference user) are then considered in the recommendation, making the method less personalised (more biased).
   - This approach is less personalized than the user-user approach but more robust.
@@ -195,7 +195,7 @@
   - The main assumption behind matrix factorisation is that there exists a pretty low dimensional latent space of features in which we can represent both users and items and such that the interaction between a user and an item can be obtained by computing the dot product of corresponding dense vectors in that space.
   - Note we don’t want to give explicitly these features to our model as it could be done for content based approaches. Instead, we prefer to let the system discover these useful features by itself and make its own representations of both users and items.
   - As they are learned and not given, extracted features taken individually have a mathematical meaning but no intuitive interpretation (and, so, are difficult, if not impossible, to understand as human).
-  - !["Matrix Factorization"](./images/matrix-factorization.png "Matrix Factorization")
+  - !["Matrix Factorization"](./img/matrix-factorization.png "Matrix Factorization")
 
 ## Evaluation of a Reccomender System
 
